@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/mister-canvas/css/style.css">
+    <script src="https://kit.fontawesome.com/047b2e3314.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body onload="onInit()">
+    <div class="main-screen" onclick="toggleOpenModal()"></div>
+    <div class="tools">
+        <input type="color" class="brush-color" onchange="onSetColor(value)">
+        <input type="color" class="canvas-background" onchange="onSetBgColor(value)">
+
+        <label for="image" class="custom-file-upload">
+            <i class="fa fa-cloud-upload"></i> Upload
+        </label>
+        <input type="file" class="file-input" id="image" onchange="onImgInput(event)" />
+
+        <select class="select-shape" onchange="onSelectShape(value)">
+            <option value="line">Line</option>
+            <option value="square">Square</option>
+            <option value="triangle">Triangle</option>
+            <option value="circle">Circle</option>
+        </select>
+
+        <a href="#" class="save" onclick="onDownloadImg(this)" download="my-img.jpg">
+            <button class="btn">Download</button>
+        </a>
+
+        <button class="btn" onclick="uploadImg()">UPLOAD</button>
+        <!-- <button class="share-btn">SHARE</button> -->
+        <button class="btn" onclick="clearCanvas()">CLEAR</button>
+    </div>
+    <div class="canvas-container">
+        <canvas id="my-canvas" width="1108" height="951" style="cursor: crosshair;"></canvas>
+    </div>
+
+    <div class="share-container"></div>
+    </div>
+
+    <script src="/mister-canvas/js/upload-service.js"></script>
+    <script src="/mister-canvas/js/drawings.js"></script>
+    <script src="/mister-canvas/js/main.js"></script>
+</body>
+
+</html>
