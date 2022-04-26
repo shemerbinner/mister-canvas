@@ -131,8 +131,8 @@ function onSelectShape(shape) {
 
 function resizeCanvas() {
     const elContainer = document.querySelector('.canvas-container')
-    gElCanvas.width = elContainer.offsetWidth - 40;
-    gElCanvas.height = elContainer.offsetHeight - 300;
+    gElCanvas.width = elContainer.offsetWidth;
+    gElCanvas.height = elContainer.offsetHeight;
 }
 
 function clearCanvas() {

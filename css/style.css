@@ -8,13 +8,16 @@ canvas {
   margin: 0 auto;
   outline: 1px solid black;
   background-color: white;
+  height: 100%;
+  width: 100%;
 }
 
 .canvas-container {
   padding: 20px;
-  margin: 20px 40px 0;
+  margin: 0 40px;
   border-radius: 13px;
   box-shadow: inset -1px 1px 13px 9px #5c5a5a;
+  height: 83vh;
 }
 
 .select-shape {
@@ -48,9 +51,7 @@ input[type="file"] {
   width: 770px;
   height: 32px;
   background-color: #bdbbb4;
-  position: absolute;
-  top: 5px;
-  transform: translate(50%);
+  margin: 10px auto;
   padding: 10px 11px;
   display: flex;
   justify-content: space-between;
